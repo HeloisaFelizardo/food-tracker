@@ -1,6 +1,7 @@
 # Food Tracker App
-<<<<<<< HEAD
-=======
 
->>>>>>> b113aa3 (add README.md)
+<<<<<<< HEAD
+
+# Food Tracker App
+
 Food Tracker App with HTML, CSS, JavaScript
