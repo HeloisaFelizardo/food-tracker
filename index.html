@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="pt-br">
 
 <head>
 	<meta charset="UTF-8" />
@@ -7,44 +7,46 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="https://cdn.skypack.dev/snackbar@1/dist/snackbar.min.css" />
 	<link rel="stylesheet" href="css/index.css">
-	<title>Food Tracker App</title>
+	<title>Aplicativo de Rastreamento de Alimentos</title>
 </head>
 
 <body>
 	<nav id="navbar">
-		<a href="#" class="nav-brand">My Nutrition</a>
+		<a href="#" class="nav-brand">Aplicativo de Rastreamento de Alimentos</a>
 	</nav>
 
 	<div class="container" id="main">
-		<h2>Add food</h2>
+		<h2>Adicionar Alimento</h2>
 		<form id="create-form">
-			<label for="create-name">Food name:</label>
+			<label for="create-name">Tipo de Alimento:</label>
 			<select id="create-name">
-				<option value="">Please select</option>
+				<option value="">Selecione o Alimento</option>
 				<!-- these are the only values accepted by the API -->
 				<option value="pizza">Pizza</option>
-				<option value="pasta">Pasta</option>
-				<option value="burger">Burger</option>
-				<option value="soup">Soup</option>
-				<option value="salad">Salad</option>
-				<option value="apple">Apple</option>
-				<option value="peach">Peach</option>
-				<option value="cider">Cider</option>
+				<option value="pasta">Massa</option>
+				<option value="burger">Hambúrguer</option>
+				<option value="soup">Sopa</option>
+				<option value="salad">Salada</option>
+				<option value="apple">Maçã</option>
+				<option value="peach">Pêssego</option>
+				<option value="cider">Sidra</option>
 			</select>
 			<div class="nutrition-values">
-				<label for="create-carbs">Carbs:</label>
-				<input class="nutrition-input" type="number" id="create-carbs" min="0" max="200" placeholder="0g" />
-				<label for="create-protein">Protein:</label>
-				<input class="nutrition-input" type="number" id="create-protein" min="0" max="200" placeholder="0g" />
-				<label for="create-fat">Fat:</label>
-				<input class="nutrition-input" type="number" id="create-fat" min="0" max="200" placeholder="0g" />
+				<label for="create-carbs">Carboidratos (g):</label>
+				<input class="nutrition-input" type="number" id="create-carbs" min="0" max="200"
+					placeholder="0 gramas" />
+				<label for="create-protein">Proteína (g):</label>
+				<input class="nutrition-input" type="number" id="create-protein" min="0" max="200"
+					placeholder="0 gramas" />
+				<label for="create-fat">Gordura (g):</label>
+				<input class="nutrition-input" type="number" id="create-fat" min="0" max="200" placeholder="0 gramas" />
 				<div></div>
-				<input type="submit" class="btn btn-default create-submit" value="Add" />
+				<input type="submit" class="btn btn-default create-submit" value="Adicionar" />
 			</div>
 		</form>
-		<h2>Log</h2>
+		<h2>Registro de Alimentos</h2>
 		<div class="card" id="total-calories-container">
-			<h3>Total calories logged: <span id="total-calories">0</span></h3>
+			<h3>Calorias Totais Registradas: <span id="total-calories">0</span></h3>
 		</div>
 		<ul id="food-list"></ul>
 	</div>

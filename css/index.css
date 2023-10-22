@@ -24,6 +24,7 @@
 body {
 	margin: 0;
 	background-color: var(--neutral-5);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 h1 {
@@ -145,6 +146,7 @@ button.btn {
 	text-decoration: none;
 	color: var(--primary-2);
 }
+
 #create-form {
 	position: relative;
 }
@@ -184,7 +186,7 @@ input:not(.btn) {
 	padding: 0.75em 0.5em;
 	background-color: white;
 	width: 100%;
-	max-width: 250px;
+	max-width: 120px;
 	border: none;
 	border-radius: 3px;
 	text-align: right;
@@ -215,6 +217,7 @@ input:not(.btn) {
 	color: var(--black);
 	margin-right: 20px;
 }
+
 .nav-tabs a#onlink {
 	border-bottom: 7px solid var(--accent-1);
 }
@@ -258,7 +261,7 @@ select {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	display: grid;
-	grid-template-columns: 99px auto;
+	grid-template-columns: 130px auto;
 	align-items: center;
 	gap: 10px 0;
 }
@@ -269,7 +272,6 @@ select {
 
 .nutrition-input,
 .create-submit {
-	width: 100px !important;
 	box-sizing: border-box;
 }
 
@@ -329,10 +331,12 @@ select {
 	color: #f3ad6c;
 	font-size: 18px;
 }
+
 .card .protein::marker {
 	color: #c7443e;
 	font-size: 18px;
 }
+
 .card .fat::marker {
 	color: #f9dc6e;
 	font-size: 18px;
@@ -348,6 +352,7 @@ select {
 .card .macros ul {
 	padding-left: 0;
 }
+
 .card .macros li {
 	margin: 0 10px;
 	text-align: center;
@@ -371,9 +376,11 @@ select {
 	margin-bottom: 0;
 	font-weight: normal;
 }
+
 #total-calories-container span {
 	font-weight: bold;
 }
+
 /* .tooltip {
 	position: relative;
 	display: inline-block;
