@@ -3,11 +3,11 @@
 // Importa a classe FetchWrapper do arquivo fetch-wrapper.js.
 import FetchWrapper from './class/fetch-wrapper.js';
 import { capitalize, calculateCalories } from './helpers.js';
-import { snackbar } from './snackbar.js';
+import { Snackbar } from './dist/snackbar.js';
 
 // Cria uma instância da classe FetchWrapper, que será usada para fazer requisições à API Firestore.
-const API = new FetchWrapper('https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/heloisa');
-
+const API = new FetchWrapper('https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/testeheloisa');
+const snackbar = new Snackbar();
 // Obtém referências para elementos HTML usando seus IDs.
 const list = document.querySelector('#food-list');
 const form = document.querySelector('#create-form');
@@ -59,7 +59,5 @@ form.addEventListener('submit', (event) => {
 		carbs.value = '';
 		protein.value = '';
 		fat.value = '';
-
-		snackbar.show('Food added successfully.');
 	});
 });
