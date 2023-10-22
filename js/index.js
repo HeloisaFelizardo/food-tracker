@@ -3,6 +3,7 @@
 // Importa a classe FetchWrapper do arquivo fetch-wrapper.js.
 import FetchWrapper from './class/fetch-wrapper.js';
 import { capitalize, calculateCalories } from './helpers.js';
+import { snackbar } from './snackbar.js';
 
 // Cria uma instância da classe FetchWrapper, que será usada para fazer requisições à API Firestore.
 const API = new FetchWrapper('https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/heloisa');
@@ -33,9 +34,10 @@ form.addEventListener('submit', (event) => {
 		// Verifica se há um erro na resposta da API.
 		if (data.error) {
 			// Havia um erro, não faz nada e retorna.
+			snackbar.show('Ausência de dados.');
 			return;
 		}
-
+		snackbar.show('Alimento adicionado com sucesso!');
 		// Insere um novo item na lista de alimentos no HTML com os valores do formulário.
 		list.insertAdjacentHTML(
 			'beforeend',
@@ -57,5 +59,7 @@ form.addEventListener('submit', (event) => {
 		carbs.value = '';
 		protein.value = '';
 		fat.value = '';
+
+		snackbar.show('Food added successfully.');
 	});
 });
