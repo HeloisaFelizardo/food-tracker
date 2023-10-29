@@ -19,3 +19,8 @@ Aplicativo rastreador de alimentos.
 - Modules & importing packages
 - DOM (selection, events, etc.)
 - Closures
+- Integrate two 3rd party libraries: snackbar and chart.js
+- think about refactoring and DRY
+- refactor duplicate code
+- use classes to store application data/state
+- work with a generic API (Firebase API)

@@ -1,12 +1,15 @@
 //Este código lida com o envio de dados de alimentos para uma API Firestore e exibe os alimentos na lista após a submissão do formulário.
 // Importa a classe FetchWrapper do arquivo fetch-wrapper.js.
 import FetchWrapper from './fetch-wrapper.js';
-import { displayEntry } from './helpers.js';
+import { displayEntry, render } from './helpers.js';
 import { Snackbar } from './snackbar.js';
+import AppData from './app-data.js';
 
 // Cria uma instância da classe FetchWrapper, que será usada para fazer requisições à API Firestore.
-const API = new FetchWrapper('https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/heloisa');
+const API = new FetchWrapper('https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/testeheloisa');
 const snackbar = new Snackbar();
+const appData = new AppData();
+
 // Obtém referências para elementos HTML usando seus IDs.
 const form = document.querySelector('#create-form');
 const name = document.querySelector('#create-name');
@@ -38,7 +41,7 @@ form.addEventListener('submit', (event) => {
 		snackbar.show('Alimento adicionado com sucesso!');
 		// Função que insere um novo item na lista de alimentos no HTML com os valores do formulário.
 		displayEntry(name.value, carbs.value, protein.value, fat.value);
-
+		render();
 		// Limpa os campos do formulário após a submissão.
 		name.value = '';
 		carbs.value = '';
@@ -54,6 +57,7 @@ const init = () => {
 			const fields = doc.fields;
 			// Função que insere um novo item na lista de alimentos no HTML com os valores do formulário.
 			displayEntry(fields.name.stringValue, fields.carbs.integerValue, fields.protein.integerValue, fields.fat.integerValue);
+			render();
 		});
 	});
 };

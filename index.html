@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="css/snackbar.css" />
 	<link rel="stylesheet" href="css/index.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 	<title>Aplicativo de Rastreamento de Alimentos</title>
 </head>
 
@@ -47,11 +48,13 @@
 		<h2>Registro de Alimentos</h2>
 		<div class="card" id="total-calories-container">
 			<h3>Calorias Totais Registradas: <span id="total-calories">0</span></h3>
+			<canvas id="app-chart" style="width:100%;max-width:700px"></canvas>
 		</div>
 		<ul id="food-list"></ul>
 	</div>
+	<script type="module" src="js/firebase.js"></script>
 	<script type="module" src="js/snackbar.js"></script>
-	<script type="module" src="js/main.js"></script>
+	<script type="module" src="js/index.js"></script>
 </body>
 
 </html>
