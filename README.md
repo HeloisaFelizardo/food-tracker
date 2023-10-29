@@ -1,5 +1,7 @@
 # Food Tracker App
 
+Project built from the [Learn JavaScript](https://learnjavascript.online/)
+
 ## Descrição:
 
 Aplicativo rastreador de alimentos.
