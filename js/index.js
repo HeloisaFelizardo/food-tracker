@@ -3,12 +3,10 @@
 import FetchWrapper from './fetch-wrapper.js';
 import { displayEntry, render } from './helpers.js';
 import { Snackbar } from './snackbar.js';
-import AppData from './app-data.js';
 
 // Cria uma instância da classe FetchWrapper, que será usada para fazer requisições à API Firestore.
 const API = new FetchWrapper('https://firestore.googleapis.com/v1/projects/jsdemo-3f387/databases/(default)/documents/testeheloisa');
 const snackbar = new Snackbar();
-const appData = new AppData();
 
 // Obtém referências para elementos HTML usando seus IDs.
 const form = document.querySelector('#create-form');
